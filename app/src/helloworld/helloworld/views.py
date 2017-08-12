@@ -12,7 +12,6 @@ def index(request):
     return HttpResponse("Hello Hasura World!")
 
 def recieve_call(request):
-    r = requests.get("http://filestore.hasura/?file_id=mytext&file_op=create")
     print(request)
     fileext = randint(0,10)
     file_name = "_question"+str(fileext)
@@ -48,7 +47,7 @@ def get_answer(request):
   # response.play('https://api.twilio.com/cowbell.mp3', loop=10)
   response = "<?xml version='1.0' encoding='UTF-8'?>"\
                 "<Response>"\
-                 "<Play>https://api.twilio.com/cowbell.mp3</Play>"\
+                 "<Play>https://drive.google.com/file/d/0BwJWxrdUYlQkb0FyYW9tTVZseW8/view?usp=sharing</Play>"\
              "</Response>"
   return HttpResponse(response)
 
