@@ -40,7 +40,7 @@ def call_to_answer(request):
   account_sid ="AC65f13cfe74133243c85da04c637c0155"
   auth_token = "1755aba669b58f1c865842c0110e1b36"
   client = Client(account_sid, auth_token)
-  call = client.calls.create(to="+919860328030",from_="9472825539",url="https://voura.calves93.hasura-app.io/getanswer/")
+  call = client.calls.create(to="+919860328030",from_="9472825539",url="http://voura.calves93.hasura-app.io/getanswer/")
   return HttpResponse("")
 
 def get_answer(request):
@@ -54,11 +54,11 @@ def get_answer(request):
 
 def get_question(request):
   f = open('myfile.txt','r')
-  fileext = f.read()
+  fileext = str(f.read())
   response ="<html>"\
               "<body>"\
                 "<audio controls>"\
-                  "<source src='http://recordings.kookoo.in/voura/current_user_question0.mp3' type='audio/mpeg'>"\
+                  "<source src='http://recordings.kookoo.in/voura/current_user_question"+fileext+".mp3' type='audio/mpeg'>"\
                   "Your browser does not support the audio element."\
                 "</audio>"\
               "</body>"\
