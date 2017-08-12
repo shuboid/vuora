@@ -11,13 +11,12 @@ def index(request):
 
 def recieve_call(request):
     print(request)
-    fileext = randint(0,5000)
-
+    fileext = randint(0,10)
     response = "<?xml version='1.0' encoding='UTF-8'?>"\
                 "<Response>"\
                   "<playtext speed='4' quality='best' >Thank you for calling Voura. We are always here to help you </playtext>"\
                   "<playtext speed='4' quality='best'> Hey friend! Leave your question for us we will get back to you soon </playtext>"\
-                   "<record format='wav' silence='3' maxduration='40' >current_user"+fileext+"</record>"\
+                   "<record format='wav' silence='3' maxduration='40' >current_user_" +fileext+ "</record>"\
                   "</Response>"
     return HttpResponse(response)
 
