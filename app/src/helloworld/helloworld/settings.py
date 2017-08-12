@@ -106,7 +106,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
-
+CSRF_COOKIE_SECURE = False
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
