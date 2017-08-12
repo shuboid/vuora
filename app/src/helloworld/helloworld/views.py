@@ -40,7 +40,7 @@ def call_to_answer(request):
   account_sid ="AC65f13cfe74133243c85da04c637c0155"
   auth_token = "1755aba669b58f1c865842c0110e1b36"
   client = Client(account_sid, auth_token)
-  call = client.calls.create(to="+919860328030",from_="9472825539",url="https://voura.calves93.hasura-app.io/getanswer/")
+  call = client.calls.create(to="+919860328030",from_="9472825539",url="https://voura.calves93.hasura-app.io/getanswer")
   return HttpResponse("")
 
 def get_answer(request):
