@@ -12,13 +12,13 @@ def index(request):
     return HttpResponse("Hello Hasura World!")
 
 def recieve_call(request):
-
+    r = requests.get("http://filestore.hasura/?file_id=mytext&file_op=create")
     print(request)
     fileext = randint(0,10)
     file_name = "_question"+str(fileext)
-    f = open('myfile.txt', 'w')
-    f.write(str(fileext))  # python will convert \n to os.linesep
-    f.close()
+    # f = open('myfile.txt', 'w')
+    # f.write(str(fileext))  # python will convert \n to os.linesep
+    # f.close()
     response = "<?xml version='1.0' encoding='UTF-8'?>"\
                 "<Response>"\
                   "<playtext speed='4' quality='best' >Thank you for calling Voura. We are always here to help you </playtext>"\
